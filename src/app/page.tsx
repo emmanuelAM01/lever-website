@@ -1,58 +1,50 @@
-import React from 'react';
-import SpinningAsset from './components/SpinningAsset';
+import React from "react";
+import Header from "./components/header";
+import SpinningLever from "./components/SpinningLever";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#1A1A1A] text-white">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="flex-1 space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              The Future of
-              <span className="text-primary"> Decentralized Finance</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-400 max-w-xl">
-              Experience the next generation of DeFi. Secure, transparent, and efficient financial solutions for everyone.
-            </p>
-            <button 
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full"
-            >
-              Get Started
-            </button>
-          </div>
-          
-          <div className="flex-1 flex justify-center items-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <SpinningAsset />
-          </div>
-        </div>
+    <div className="min-h-screen bg-[#1A1A1A] text-white overflow-hidden snap-y snap-mandatory">
+      <Header />
+      {/* Lever Section */}
+      <div className="flex flex-col justify-center items-center h-screen snap-start">
+        <SpinningLever />
+        <h1 className="text-4xl md:text-6xl font-bold mt-8 text-center">
+          Lever Platform
+        </h1>
+        <p className="text-lg md:text-xl text-gray-400 text-center max-w-md mt-4">
+          Deploying Bitcoin in the Real World
+        </p>
+        <button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full mt-6">
+          Get Started
+        </button>
       </div>
 
       {/* Features Section */}
-      <div className="bg-[#121212] py-16">
+      <div className="bg-[#121212] py-16 snap-start">
         <div className="container mx-auto px-4 text-center space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Why Choose Us?
+            How it operates
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-[#1E1E1E] rounded-xl shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">Secure</h3>
-              <p className="text-gray-400">Industry-leading security protocols ensure your assets are always safe.</p>
+              <h3 className="text-2xl font-semibold mb-4">Collateralize</h3>
+              <p className="text-gray-400">Deposit BTC</p>
             </div>
             <div className="p-6 bg-[#1E1E1E] rounded-xl shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">Transparent</h3>
-              <p className="text-gray-400">Complete visibility of transactions for peace of mind.</p>
+              <h3 className="text-2xl font-semibold mb-4">Borrow/Invest</h3>
+              <p className="text-gray-400">Borrow stables and invest into RWA tokens</p>
             </div>
             <div className="p-6 bg-[#1E1E1E] rounded-xl shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">Efficient</h3>
-              <p className="text-gray-400">High-speed processing with minimal fees for all users.</p>
+              <h3 className="text-2xl font-semibold mb-4">Earn Yield</h3>
+              <p className="text-gray-400">Putting a crypto face to traditional finance methods.</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
-      <div className="bg-[#0F0F0F] py-20">
+      <div className="bg-[#0F0F0F] py-20 snap-start">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Join the Future of Finance?

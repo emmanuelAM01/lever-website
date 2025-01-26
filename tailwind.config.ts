@@ -9,28 +9,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#FF6F61", // Coral
-          foreground: "#FFFFFF",
-        },
-        secondary: {
-          DEFAULT: "#FF8C69", // Lighter Coral
-          foreground: "#FFFFFF",
-        },
+        primary: "#FF6F61", // Coral (Rod)
+        secondary: "#FF8C69", // Lighter Coral (Arm)
+        tertiary: "#4DB6AC", // Teal (Counterweight)
       },
       keyframes: {
-        "spin-3d-positive": {
-          "0%": { transform: "rotate3d(1, 1, 0, 0deg)" },
-          "100%": { transform: "rotate3d(1, 1, 0, 360deg)" },
+        "spin-arm": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
         },
-        "spin-3d-negative": {
-          "0%": { transform: "rotate3d(-1, -1, 0, 0deg)" },
-          "100%": { transform: "rotate3d(-1, -1, 0, 360deg)" },
+        "spin-counterweight": {
+          "0%": { transform: "translateX(0) rotate(0deg)" },
+          "100%": { transform: "translateX(30px) rotate(360deg)" },
         },
       },
       animation: {
-        "spin-3d-positive": "spin-3d-positive 8s linear infinite",
-        "spin-3d-negative": "spin-3d-negative 8s linear infinite",
+        "spin-arm": "spin-arm 4s linear infinite",
+        "spin-counterweight": "spin-counterweight 6s linear infinite",
       },
     },
   },
