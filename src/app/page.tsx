@@ -7,7 +7,7 @@ import Cards from "./components/cards";
 
 const Index = () => {
   const [showHeroButton, setShowHeroButton] = useState(true);
-  const heroRef = useRef<HTMLDivElement>(null); // Change the type to RefObject<HTMLDivElement> directly
+  const heroRef = useRef<HTMLDivElement | null>(null); // It's safe to use null initially
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,7 +40,8 @@ const Index = () => {
   return (
     <div className="min-h-screen w-full bg-[#1A1A1A] text-white">
       <Header showButton={!showHeroButton} />
-      <Hero showButton={showHeroButton} heroRef={heroRef} />
+      {/* Here we assert the type of heroRef to avoid the error */}
+      <Hero showButton={showHeroButton} heroRef={heroRef as React.RefObject<HTMLDivElement>} />
       <MovingList />
       <Cards />
     </div>
