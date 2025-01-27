@@ -35,7 +35,7 @@ const Cards = () => {
       Real World Investments
     </h2>
     <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-      Access real estate deals, like a Hyatt in Tuscany, on Globacap's regulated marketplace.
+      Access real estate deals, like a Hyatt in Tuscany, on Globacap&apos;s regulated marketplace.
     </p>
   </div>
 
