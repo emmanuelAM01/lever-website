@@ -7,7 +7,7 @@ import Cards from "./components/cards";
 
 const Index = () => {
   const [showHeroButton, setShowHeroButton] = useState(true);
-  const heroRef = useRef<HTMLDivElement | null>(null);
+  const heroRef = useRef<HTMLDivElement>(null); // Change the type to RefObject<HTMLDivElement> directly
 
   useEffect(() => {
     const observer = new IntersectionObserver(
