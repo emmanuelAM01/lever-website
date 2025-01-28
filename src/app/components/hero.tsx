@@ -40,10 +40,15 @@ const Hero = ({
               Bringing Commonsense Yield to
               <span className="text-primary"> Bitcoin </span>
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed lg:leading-[1.5]">
-              Lever transforms idle Bitcoin into productive capital by <br />
-              connecting treasuries with real world investments.
-            </p>
+            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
+  Lever transforms idle Bitcoin into productive capital by{" "}
+  <span className="hidden lg:inline-block">
+    <br />
+  </span>
+  connecting treasuries with real-world investments.
+</p>
+
+
             {showButton && (
               <button
                 onClick={handleOpenForm} // Open the form when clicked
