@@ -1,8 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export', // Enable static export
-
+  reactStrictMode: true, // Optional: Enables React's strict mode
+  swcMinify: true, // Optional: Enables SWC-based minification
 };
 
 export default nextConfig;
