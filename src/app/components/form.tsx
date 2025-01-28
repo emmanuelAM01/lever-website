@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  interests: string[]; // Explicitly type interests as string[]
+  agreeToTerms: boolean;
+}
+
 const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
     email: "",
-    interests: [],
+    interests: [], // This is now explicitly typed as string[]
     agreeToTerms: true,
   });
 
-  const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission state
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target as HTMLInputElement;
 
     if (type === "checkbox") {
       if (name === "interests") {
@@ -49,7 +57,7 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
       });
   
       if (response.ok) {
-        setFormSubmitted(true); // Set success state
+        setFormSubmitted(true);
       } else {
         const errorData = await response.json();
         console.error("Error response from API:", errorData);
@@ -64,7 +72,7 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
-      onClose(); // Close the form if the user clicks outside the modal content
+      onClose();
     }
   };
 
@@ -73,11 +81,10 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
-      onClick={handleBackdropClick} // Close modal when clicking on the backdrop
+      onClick={handleBackdropClick}
     >
       <div className="bg-[#0F0F0F] p-6 sm:p-10 rounded-xl w-full max-w-lg sm:max-w-3xl shadow-lg border border-gray-700 relative mx-4 max-h-[85vh] overflow-y-auto">
         {formSubmitted ? (
-          // Success Message
           <div className="text-center text-white">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               We are excited to usher in DeFi’s real world transformation.
@@ -93,7 +100,6 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
             </button>
           </div>
         ) : (
-          // Form
           <>
             <h2 className="text-2xl sm:text-4xl font-bold text-center mb-6 text-white">Get Started</h2>
             <p className="text-center mb-8 text-gray-400 text-sm sm:text-lg">
@@ -101,7 +107,6 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
             </p>
 
             <form onSubmit={handleSubmit}>
-              {/* Name Fields */}
               <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block mb-2 text-sm font-medium text-gray-400">First Name</label>
@@ -127,7 +132,6 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
                 </div>
               </div>
 
-              {/* Email Field */}
               <div className="mb-6">
                 <label className="block mb-2 text-sm font-medium text-gray-400">Email</label>
                 <input
@@ -140,7 +144,6 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
                 />
               </div>
 
-              {/* Interest Checkboxes */}
               <div className="mb-6">
                 <p className="mb-2 text-sm font-medium text-gray-400">What interests you?</p>
                 <div className="space-y-2">
@@ -165,12 +168,10 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
                 </div>
               </div>
 
-              {/* Terms & Conditions */}
               <div className="mb-6 text-center text-gray-400 text-sm">
                 I agree to receive updates on my waitlist status and other communications from Lever.
               </div>
 
-              {/* Submit Button */}
               <div className="flex justify-center">
                 <button
                   type="submit"
@@ -184,7 +185,6 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
           </>
         )}
 
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-300 text-xl"
