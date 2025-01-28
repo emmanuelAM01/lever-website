@@ -18,9 +18,9 @@ export default {
         },
   
       keyframes: {
-        "scroll": {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" },
+        scroll: {
+          "0%": { transform: "translateX(0)" }, // Start from the left
+          "100%": { transform: "translateX(-50%)" }, // Move all the way left (half the container width)
         },
         "spin-arm": {
           "0%": { transform: "rotate(0deg)" },
@@ -36,7 +36,7 @@ export default {
         },
       },
       animation: {
-        "scroll": "scroll 60s linear infinite forwards",
+        scroll: "scroll 20s linear infinite",
         "spin-arm": "spin-arm 4s linear infinite",
         "spin-counterweight": "spin-counterweight 6s linear infinite",
         "wave-animation": "wave 10s ease-in-out infinite", // Wave animation for background

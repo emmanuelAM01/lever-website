@@ -4,6 +4,8 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import MovingList from "./components/movingList";
 import Cards from "./components/cards";
+import Bubbles from './components/bubbles';
+import Footer from './components/footer';
 
 const Index = () => {
   const [showHeroButton, setShowHeroButton] = useState(true);
@@ -44,6 +46,8 @@ const Index = () => {
       <Hero showButton={showHeroButton} heroRef={heroRef as React.RefObject<HTMLDivElement>} />
       <MovingList />
       <Cards />
+      <Bubbles />
+      <Footer />
     </div>
   );
 };

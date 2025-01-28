@@ -2,95 +2,94 @@ import React from 'react';
 
 const Cards = () => {
   return (
-    <div className="px-4 py-8">
-      <h1 className="text-2xl font-semibold mb-4">
+    <div className="px-4 lg:px-[175px] py-8 bg-black">
+      <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold leading-relaxed lg:leading-[1.5] tracking-wide text-center mb-[50px]">
         A Simple, Compliant, and Refreshing Experience
       </h1>
 
-
-    <div className="flex flex-col lg:flex-row gap-4 h-[500px] mb-10">
-        {/* Right side with light color */}
-        <div className="flex-1 bg-accent-2 p-12 flex flex-col justify-center text-white">
-            {/* Add your content here for the right side */}
-            <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
-            Stuff here for the right side of the full width card
-            </p>
-        </div>
-        <div className="flex-1 bg-gray-800 p-12 flex flex-col justify-center items-start text-white">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+      {/* First Card */}
+      <div className="flex flex-col lg:flex-row gap-4 mb-10">
+        {/* Text (First on mobile) */}
+        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-1 lg:order-1">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
             Bitcoin Collateralized Loans
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
             Deposit BTC into an escrow (via Collar) to borrow USD tokens at sub 5% interest.
-            </p>
+          </p>
         </div>
-    </div>
-
-
-
-    <div className="flex flex-col lg:flex-row gap-4 h-[500px] mb-10">
-  {/* Left side with dark grey color */}
-  <div className="flex-1 bg-gray-800 p-12 flex flex-col justify-center text-white">
-    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
-      Real World Investments
-    </h2>
-    <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-      Access real estate deals, like a Hyatt in Tuscany, on Globacap&apos;s regulated marketplace.
-    </p>
-  </div>
-
-  {/* Right side with light color */}
-  <div className="flex-1 bg-accent-2 p-12 flex flex-col justify-center text-white">
-    {/* Add your content here for the right side */}
-    <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
-      Stuff here for the right side of the full width card
-    </p>
-  </div>
-</div>
-
-
-<div className="flex flex-col lg:flex-row gap-4 h-[500px] mb-10">
-        {/* Right side with light color */}
-        <div className="flex-1 bg-accent-2 p-12 flex flex-col justify-center text-white">
-            {/* Add your content here for the right side */}
-            <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
-            Stuff here for the right side of the full width card
-            </p>
+        {/* Image (Second on mobile) */}
+        <div className="flex-1 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-2">
+          <img
+            src="/images/collateralizeCard.png"
+            alt="Collateralize"
+            className="w-full sm:w-2/3 lg:w-2/3 h-auto rounded-lg mx-auto"
+          />
         </div>
-        <div className="flex-1 bg-gray-800 p-12 flex flex-col justify-center items-start text-white">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+      </div>
+
+      {/* Second Card */}
+      <div className="flex flex-col lg:flex-row gap-4 mb-10">
+        {/* Text (First on mobile) */}
+        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-1 lg:order-2">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+            Real World Investments
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+            Access real estate, like a Hyatt in Tuscany, on Globacap&apos;s regulated market.
+          </p>
+        </div>
+        {/* Image (Second on mobile) */}
+        <div className="flex-1 p-6 lg:p-12 lg:w-2/3 flex flex-col justify-center text-white order-2 lg:order-1">
+          <img
+            src="/images/tuscany.jpg"
+            alt="Tuscany Real Estate"
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+
+      {/* Third Card */}
+      <div className="flex flex-col lg:flex-row gap-4 mb-10">
+        {/* Text (First on mobile) */}
+        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-1 lg:order-1">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
             Commonsense Diversification
-
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-            Unlock crypto-uncorrelated yield, without selling BTC, through tangible businesses (not staking).
-            </p>
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
+            Unlock crypto-uncorrelated yield, without selling BTC, through tangible businesses.
+          </p>
         </div>
-    </div>
+        {/* Image (Second on mobile) */}
+        <div className="flex-1 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-2">
+          <img
+            src="/images/diversificationCard.png"
+            alt="Diversification"
+            className="w-full sm:w-2/3 lg:w-2/3 h-auto rounded-lg mx-auto"
+          />
+        </div>
+      </div>
 
-    <div className="flex flex-col lg:flex-row gap-4 h-[500px] mb-10">
-  {/* Left side with dark grey color */}
-  <div className="flex-1 bg-gray-800 p-12 flex flex-col justify-center text-white">
-    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
-    Gradual decentralization
-    </h2>
-    <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-    Starting with bespoke fundraises, building toward an asset-agnostic, DeFi future.
-    </p>
-  </div>
-
-  {/* Right side with light color */}
-  <div className="flex-1 bg-accent-2 p-12 flex flex-col justify-center text-white">
-    {/* Add your content here for the right side */}
-    <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
-      Stuff here for the right side of the full width card
-    </p>
-  </div>
-</div>
-
-
-
-
+      {/* Fourth Card */}
+      <div className="flex flex-col lg:flex-row gap-4 mb-10">
+        {/* Text (First on mobile) */}
+        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-1 lg:order-2">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+            Gradual Decentralization
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+            Starting with bespoke fundraises, building toward an asset-agnostic, DeFi future.
+          </p>
+        </div>
+        {/* Image (Second on mobile) */}
+        <div className="flex-1 lg:w-2/3 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-1">
+          <img
+            src="/images/decentralizationCard.png"
+            alt="Decentralization"
+            className="w-full sm:w-2/3 h-auto rounded-lg mx-auto"
+          />
+        </div>
+      </div>
     </div>
   );
 };
