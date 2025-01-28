@@ -151,7 +151,7 @@ const FormPop = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
                     "Access real world yield",
                     "Issue an asset",
                     "Partner with Lever",
-                    "Work with Lever",
+                    "Work at Lever",
                   ].map((interest) => (
                     <label key={interest} className="flex items-center text-gray-400">
                       <input

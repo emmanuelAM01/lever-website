@@ -22,7 +22,7 @@ const Bubbles = () => {
         {/* Right Section with Circles */}
         <div className="flex-1 relative grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center lg:block lg:mr-[100px] mb-5">
           {/* Bitcoin Loan Market */}
-          <div className="aspect-square w-[120px] sm:w-[160px] lg:absolute lg:right-[55%] lg:top-[5%] lg:w-[240px] hover:scale-110 transition-transform duration-300">
+          <div className="aspect-square w-[120px] sm:w-[160px] lg:absolute lg:right-[50%] lg:top-[6%] lg:w-[240px] hover:scale-110 transition-transform duration-300">
             <div className="flex h-full w-full items-center justify-center rounded-full shadow-lg text-center bg-white">
               <div>
                 <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-[#000]">$50 billion</h2>
@@ -32,7 +32,7 @@ const Bubbles = () => {
           </div>
 
           {/* Tokenized Assets */}
-          <div className="aspect-square w-[140px] sm:w-[200px] lg:absolute lg:right-[10%] lg:top-[35%] lg:w-[300px] hover:scale-110 transition-transform duration-300">
+          <div className="aspect-square w-[140px] sm:w-[200px] lg:absolute lg:right-[5%] lg:top-[35%] lg:w-[300px] hover:scale-110 transition-transform duration-300">
             <div className="flex h-full w-full items-center justify-center rounded-full shadow-lg text-center bg-white">
               <div>
                 <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-[#000]">$2 trillion</h2>
@@ -42,7 +42,7 @@ const Bubbles = () => {
           </div>
 
           {/* Annual Revenue Opportunity */}
-          <div className="aspect-square w-[100px] sm:w-[140px] lg:absolute lg:bottom-[5%] lg:right-[60%] lg:w-[180px] hover:scale-110 transition-transform duration-300">
+          <div className="aspect-square w-[100px] sm:w-[140px] lg:absolute lg:bottom-[5%] lg:right-[75%] lg:w-[180px] hover:scale-110 transition-transform duration-300">
             <div className="flex h-full w-full items-center justify-center rounded-full shadow-lg text-center bg-white">
               <div>
                 <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-[#000]">$500 million</h2>

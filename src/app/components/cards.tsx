@@ -2,7 +2,7 @@ const Cards = () => {
   return (
     <div className="px-4 lg:px-[175px] py-8 bg-black">
       <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold leading-relaxed lg:leading-[1.5] tracking-wide text-center mb-[50px]">
-        A Simple, Compliant, and Refreshing Experience
+        A Simple, Compliant Experience
       </h1>
 
       {/* First Card */}
