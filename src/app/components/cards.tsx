@@ -15,10 +15,10 @@ const Cards = () => {
             Bitcoin Collateralized Loans
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-            Deposit BTC into an escrow (via Collar) to borrow USD tokens at sub 5% interest.
+            Deposit BTC into an escrow (via Collar) to <br /> borrow USD tokens at sub 5% interest.
           </p>
         </div>
-        {/* Image (Second on mobile) */}
+        {/* Image (Second on mobile)  bg-[#dbd9d1]*/}
         <div className="flex-1 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-2">
           <img
             src="/images/collateralizeCard.png"
@@ -36,13 +36,13 @@ const Cards = () => {
             Real World Investments
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-            Access real estate, like a Hyatt in Tuscany, on Globacap&apos;s regulated market.
+            Access real estate, like a Hyatt in Tuscany, <br />  on Globacap&apos;s regulated market.
           </p>
         </div>
         {/* Image (Second on mobile) */}
-        <div className="flex-1 p-6 lg:p-12 lg:w-2/3 flex flex-col justify-center text-white order-2 lg:order-1">
+        <div className=" flex-1 p-6 lg:p-12 lg:w-2/3 flex flex-col justify-center text-white order-2 lg:order-1">
           <img
-            src="/images/tuscany.jpg"
+            src="/images/card.png"
             alt="Tuscany Real Estate"
             className="w-full h-auto rounded-lg shadow-md"
           />
@@ -57,11 +57,11 @@ const Cards = () => {
             Commonsense Diversification
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-            Unlock crypto-uncorrelated yield, without selling BTC, through tangible businesses.
+            Unlock crypto-uncorrelated yield, without <br />  selling BTC, through tangible businesses.
           </p>
         </div>
         {/* Image (Second on mobile) */}
-        <div className="flex-1 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-2">
+        <div className=" flex-1 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-2">
           <img
             src="/images/diversificationCard.png"
             alt="Diversification"
@@ -78,11 +78,11 @@ const Cards = () => {
             Gradual Decentralization
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-            Starting with bespoke fundraises, building toward an asset-agnostic, DeFi future.
+            Starting with bespoke fundraises, building toward <br /> an asset-agnostic, DeFi future.
           </p>
         </div>
         {/* Image (Second on mobile) */}
-        <div className="flex-1 lg:w-2/3 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-1">
+        <div className=" flex-1 lg:w-2/3 p-6 lg:p-12 flex flex-col justify-center text-white order-2 lg:order-1">
           <img
             src="/images/decentralizationCard.png"
             alt="Decentralization"
