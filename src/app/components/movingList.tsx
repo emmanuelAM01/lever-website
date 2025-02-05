@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 const SpinningList = () => {
   const logos = [
-    { name: "Logo 1", src: "/images/logoCORE.png" },
+    // { name: "Logo 1", src: "/images/logoCORE.png" },
     { name: "Logo 2", src: "/images/logoFBTC.png" },
     { name: "Logo 3", src: "/images/logoMichaelFlight.png" },
     { name: "Logo 4", src: "/images/logoTuscanyResort.png" },

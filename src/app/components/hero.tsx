@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SpinningAsset from "./SpinningLever";
 import FormPop from "./form";
+const Whitepaper = "/leverWhitePaper.pdf";
 
 const Hero = ({
   showButton,
@@ -17,6 +18,10 @@ const Hero = ({
 
   const handleCloseForm = () => {
     setIsFormOpen(false); // Close the form modal
+  };
+
+  const handleWhitePaper = () => {
+    window.open(Whitepaper, "_blank");
   };
 
   return (
@@ -41,21 +46,33 @@ const Hero = ({
               <span className="text-primary"> Bitcoin </span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-  Lever transforms idle Bitcoin into productive capital by{" "}
-  <span className="hidden lg:inline-block">
-    <br />
-  </span>
-  connecting treasuries with real-world investments.
-</p>
-
+              Lever transforms idle Bitcoin into productive capital by{" "}
+              <span className="hidden lg:inline-block">
+                <br />
+              </span>
+              connecting treasuries with real-world investments.
+            </p>
 
             {showButton && (
-              <button
-                onClick={handleOpenForm} // Open the form when clicked
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg rounded-full"
-              >
-                Join Waitlist
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-2 mx-auto justify-center ">
+                <button
+                  className="bg-gray-300 hover:bg-gray-400 text-black hover:text-gray-900 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-lg rounded-full font-medium transition-all transform duration-500"
+                  onClick={handleWhitePaper}
+                  style={{
+                    transform: showButton ? "translateX(0)" : "translateX(100%)",
+                    opacity: showButton ? 1 : 0,
+                  }}
+                >
+                  Whitepaper
+                </button>
+
+                <button
+                  onClick={handleOpenForm} // Open the form when clicked
+                  className="bg-primary hover:bg-primary/90 text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-lg rounded-full"
+                >
+                  Join Waitlist
+                </button>
+              </div>
             )}
           </div>
         </div>
