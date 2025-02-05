@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SpinningAsset from "./SpinningLever";
 import FormPop from "./form";
-const Whitepaper = "/leverWhitePaper.pdf";
+const Whitepaper = "/leverWhitepaper.pdf";
 
 const Hero = ({
   showButton,

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormPop from "./form";
-const Whitepaper = "/leverWhitePaper.pdf";
+const Whitepaper = "/leverWhitepaper.pdf";
 
 const Header = ({ showButton }: { showButton: boolean }) => {
   const [isFormOpen, setIsFormOpen] = useState(false); // State to control Form visibility
