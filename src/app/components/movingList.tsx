@@ -9,7 +9,7 @@ const SpinningList = () => {
     { name: "Logo 4", src: "/images/logoTuscanyResort.png" },
     { name: "Logo 5", src: "/images/logoUruguayResort.png" },
     { name: "Logo 6", src: "/images/logoWbtc.png" },
-    { name: "Logo 7", src: "/images/9.png" },
+    // { name: "Logo 7", src: "/images/9.png" },
     { name: "Logo 8", src: "/images/10.png" },
   ];
 
