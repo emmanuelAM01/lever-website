@@ -10,7 +10,7 @@ const SpinningList = () => {
     { name: "Logo 5", src: "/images/logoUruguayResort.png" },
     { name: "Logo 6", src: "/images/logoWbtc.png" },
     // { name: "Logo 7", src: "/images/9.png" },
-    { name: "Logo 8", src: "/images/10.png" },
+    { name: "Logo 8", src: "/images/NewSousta_MARCA.png" }, // PUT THE CROPPED IMAGE HERE
   ];
 
   const settings = {
@@ -45,7 +45,7 @@ const SpinningList = () => {
     <div className="relative w-full overflow-hidden bg-black">
       <Slider {...settings}>
         {logos.concat(logos).map((logo, index) => (
-          <div key={index} className="flex justify-center">
+          <div key={index} className="flex justify-center align-middle">
             <img
               src={logo.src}
               alt={logo.name}
