@@ -3,54 +3,58 @@ import Slider from "react-slick";
 
 const SpinningList = () => {
   const logos = [
-    // { name: "Logo 1", src: "/images/logoCORE.png" },
-    { name: "Logo 2", src: "/images/logoFBTC.png" },
-    { name: "Logo 3", src: "/images/logoMichaelFlight.png" },
-    { name: "Logo 4", src: "/images/logoTuscanyResort.png" },
-    { name: "Logo 5", src: "/images/logoUruguayResort.png" },
-    { name: "Logo 6", src: "/images/logoWbtc.png" },
-    // { name: "Logo 7", src: "/images/9.png" },
-    { name: "Logo 8", src: "/images/NewSousta_MARCA.png" }, // PUT THE CROPPED IMAGE HERE
+    { name: "Antalpha", src: "/images/logos/antalpha.svg", url:"https://www.antalpha.com/" },
+    { name: "Centrifuge", src: "/images/logos/cetnrifuge.svg", url:"https://centrifuge.io/" },
+    { name: "Gaib", src: "/images/logos/gaib.png", url:"https://www.gaib.ai/" },
+    { name: "Parq", src: "/images/logos/parq.png", url:"https://parqstreet.com/" },
   ];
 
   const settings = {
-    dots: false, // Disable navigation dots
-    infinite: true, // Enable infinite scrolling
-    speed: 10000, // Speed of the scroll (milliseconds) - slower now
-    slidesToShow: 5, // How many logos to show at once
-    slidesToScroll: 1, // Scroll one at a time
-    autoplay: true, // Enable auto-scroll
-    autoplaySpeed: 0, // Make it instant
-    cssEase: "linear", // Smooth scroll
-    draggable: false, // Disable dragging (for smoother infinite scroll)
+    dots: false,
+    infinite: true,
+    speed: 10000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    draggable: false,
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3, // Less logos on smaller screens
-          centerMode: true, // Center the logos
+          slidesToShow: 3,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1, // One logo on very small screens
-          centerMode: true, // Center the single logo
+          slidesToShow: 2,
         },
       },
     ],
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-black">
+    <div className="w-full overflow-hidden py-6 px-2 sm:px-6">
       <Slider {...settings}>
         {logos.concat(logos).map((logo, index) => (
-          <div key={index} className="flex justify-center align-middle">
-            <img
-              src={logo.src}
-              alt={logo.name}
-              className="object-contain w-[150px] sm:w-[120px] xs:w-[100px]" // Adjust size for mobile
-            />
+          <div key={index} className="flex items-center justify-center px-2">
+            <a href={logo.url} target="_blank" rel="noopener noreferrer">
+              <div className="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px] h-[50px] flex items-center justify-center">
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="object-contain max-h-full max-w-full"
+                />
+              </div>
+            </a>
           </div>
         ))}
       </Slider>

@@ -1,107 +1,69 @@
+"use client";
+import React from "react";
+import Image from "next/image";
+
 const Cards = () => {
+  const cards = [
+    {
+      title: "Real World Investments",
+      desc: "A click away from real yield like AI GPU cashflow, media IP sales, and private credit",
+      src: "/images/icons/rwaIcon.svg",
+    },
+    {
+      title: "Predictable Lending",
+      desc: "Collateralized BTC is used to borrow stablecoins at fixed, low rates (unlike most DeFi apps)",
+      src: "/images/icons/lockIcon.svg",
+    },
+    {
+      title: "Gradual Decentralization",
+      desc: "Starting with bespoke capital raises and lending, evolving into a multi-asset and multi-lender DEX",
+      src: "/images/icons/nodeIcon.svg",
+    },
+    {
+      title: "Stablecoin Endgame",
+      desc: "Creating a use case for BTC in the real world, launching LeverUSD to intermediate a new digital economy",
+      src: "/images/icons/arrowsIcon.svg",
+    },
+  ];
+
   return (
-    <div className="px-4 lg:px-[175px] py-8 bg-black">
-      <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold leading-relaxed lg:leading-[1.5] tracking-wide text-center mb-[50px]">
-        A Simple, Compliant Experience
-      </h1>
-
-      {/* First Card */}
-      <div className="flex flex-col lg:flex-row gap-4 mb-10">
-        {/* Text (First on mobile) */}
-        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-2 lg:order-1">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
-            Bitcoin Collateralized Loans
+    <div className="relative w-full px-4 py-12 sm:px-10 lg:px-32">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 w-full">
+        {/* Left Section */}
+        <div className="flex flex-col justify-center py-10">
+          <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-textPrimary/70 mb-4 sm:mb-6">
+            A Simple, Compliant Experience
+          </h1>
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight text-textSecondary">
+            Bitcoin-Collateralized Investing
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-            Deposit BTC into an escrow (via Collar) to{" "}
-            <span className="hidden lg:inline">
-              <br />
-            </span>
-            borrow USD tokens at sub 5% interest.
-          </p>
         </div>
-        {/* Image */}
-        <div className="flex-1 p-6 lg:p-12 flex flex-col justify-center text-white order-1 lg:order-2">
-          <img
-            src="/images/collateralizeCard.png"
-            alt="Collateralize"
-            className="w-full sm:w-2/3 lg:w-2/3 h-auto rounded-lg mx-auto"
-          />
-        </div>
-      </div>
 
-      {/* Second Card */}
-      <div className="flex flex-col lg:flex-row gap-4 mb-10">
-        {/* Text */}
-        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-2 lg:order-2">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
-            Real World Investments
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-            Access real estate, like a Hyatt in Tuscany,{" "}
-            <span className="hidden lg:inline">
-              <br />
-            </span>
-            on Globacap&apos;s regulated market.
-          </p>
-        </div>
-        {/* Image */}
-        <div className="flex-1 p-6 lg:p-12 lg:w-2/3 flex flex-col justify-center text-white order-1 lg:order-1">
-          <img
-            src="/images/card.png"
-            alt="Tuscany Real Estate"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
-        </div>
-      </div>
-
-      {/* Third Card */}
-      <div className="flex flex-col lg:flex-row gap-4 mb-10">
-        {/* Text */}
-        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-2 lg:order-1">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
-            Commonsense Diversification
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-            Unlock crypto-uncorrelated yield, without{" "}
-            <span className="hidden lg:inline">
-              <br />
-            </span>
-            selling BTC, through tangible businesses.
-          </p>
-        </div>
-        {/* Image */}
-        <div className="flex-1 p-6 lg:p-12 flex flex-col justify-center text-white order-1 lg:order-2">
-          <img
-            src="/images/diversificationCard.png"
-            alt="Diversification"
-            className="w-full sm:w-2/3 lg:w-2/3 h-auto rounded-lg mx-auto"
-          />
-        </div>
-      </div>
-
-      {/* Fourth Card */}
-      <div className="flex flex-col lg:flex-row gap-4 mb-10">
-        {/* Text */}
-        <div className="flex-1 bg-[#1A1A1A] p-6 lg:p-12 flex flex-col justify-center items-start text-white order-2 lg:order-2">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
-            Gradual Decentralization
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-            Starting with bespoke fundraises, building toward{" "}
-            <span className="hidden lg:inline">
-              <br />
-            </span>
-            an asset-agnostic, DeFi future.
-          </p>
-        </div>
-        {/* Image */}
-        <div className="flex-1 lg:w-2/3 p-6 lg:p-12 flex flex-col justify-center text-white order-1 lg:order-1">
-          <img
-            src="/images/decentralizationCard.png"
-            alt="Decentralization"
-            className="w-full sm:w-2/3 h-auto rounded-lg mx-auto"
-          />
+        {/* Cards Section */}
+        <div className="flex flex-col gap-8">
+          {cards.map((card, i) => (
+            <div
+              key={i}
+              className="bg-white/50 shadow-md rounded-none p-6 sm:p-8 flex items-start gap-4 border-[3px] rounded-tl-[0px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[0px] transition-shadow duration-500 hover:shadow-[0_0_8px_#FF6F61]"
+            >
+              <div className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] relative flex-shrink-0">
+                <Image
+                  src={card.src}
+                  alt={card.title + " icon"}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold text-textPrimary mb-1">
+                  {card.title}
+                </h3>
+                <p className="text-sm sm:text-base text-textSecondary">
+                  {card.desc}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

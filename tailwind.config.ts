@@ -6,50 +6,47 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-    theme: {
-      extend: {
-        colors: {
-          primary: "#FF6F61", // Coral (Rod)
-          secondary: "#FF8C69", // Lighter Coral (Arm)
-          tertiary: "#4DB6AC", // Teal (Counterweight)
-          // You can add more colors if you want more variety in the gradients
-          "accent-1": "#6B5B95", // Example additional color
-          "accent-2": "#FFDDC1", // Example additional color
-        },
-  
-      keyframes: {
-        scroll: {
-          "0%": { transform: "translateX(0)" }, // Start from the left
-          "100%": { transform: "translateX(-50%)" }, // Move all the way left (half the container width)
-        },
-        "spin-arm": {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
-        },
-        "spin-counterweight": {
-          "0%": { transform: "translateX(0) rotate(0deg)" },
-          "100%": { transform: "translateX(30px) rotate(360deg)" },
-        },
-        "wave": {
-          "0%": { backgroundPosition: "100% 100%" },
-          "100%": { backgroundPosition: "0% 0%" },
-        },
-      },
-      animation: {
-        scroll: "scroll 20s linear infinite",
-        "spin-arm": "spin-arm 4s linear infinite",
-        "spin-counterweight": "spin-counterweight 6s linear infinite",
-        "wave-animation": "wave 10s ease-in-out infinite", // Wave animation for background
+  theme: {
+    extend: {
+      colors: {
+        background: "#efeee7",
+        corralPrimary: "#FF6F61",
+        intermediateBackground: "#FFDDC1",
+        textPrimary: '#232323',
+        textSecondary: '#4a4a4a',
+        textTertiary: '#6b6b6b'
 
       },
-      container: {
-        center: true, // Ensures container is always centered
-        padding: {
-          DEFAULT: "1rem", // Default padding for mobile
-          sm: "2rem", // Padding for small screens and up
-          lg: "4rem", // Padding for large screens and up
-          xl: "6rem", // Padding for xlarge screens
+
+      keyframes: {
+        "gradient-move": {
+          "0%": { backgroundPosition: "0% 0%" },
+          "50%": { backgroundPosition: "0% 100%" },
+          "100%": { backgroundPosition: "0% 0%" },
         },
+        fill: {
+          '0%': { transform: 'translateY(100%)' },
+          '50%': { transform: 'translateY(90%)' },
+          '100%': { transform: 'translateY(100%)' },
+        },
+
+        'fill-bubble': {
+          '0%': { clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)' },
+          '50%': { clipPath: 'polygon(0 75%, 100% 70%, 100% 100%, 0 100%)' },
+          '100%': { clipPath: 'polygon(0 70%, 100% 75%, 100% 100%, 0 100%)' },
+        },
+        
+      },
+      animation: {
+        "gradient-move": "gradient-move 15s ease-in-out infinite",
+        fill: 'fill 4s ease-in-out infinite',
+        'fill-bubble': 'fill-bubble 2s ease-in-out forwards',
+
+      },
+
+      fontFamily: {
+        heading: ["var(--font-lora)", "serif"],
+        body: ["var(--font-work-sans)", "sans-serif"],
       },
     },
   },

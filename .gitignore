@@ -45,3 +45,4 @@ node_modules/
 .next/
 out/
 
+src/lib/lever-google-creds.json

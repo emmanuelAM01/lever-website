@@ -1,55 +1,116 @@
+// import React from "react";
+// import Bubble from "./bubble"; // adjust path if needed
+
+
+// const Bubbles = () => {
+//   return (
+//     <div className="relative px-6 sm:px-10 lg:px-32 py-10 min-h-screen border-b-black border-[1px]">
+//       {/* Title */}
+//       <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold leading-relaxed lg:leading-[1.5] tracking-wide text-center mb-[50px]">
+//         At the Intersection of Bitcoin and Real-World Assets
+//       </h1>
+
+//       <div className="w-full flex flex-col lg:flex-row gap-6 lg:gap-4 lg:h-[550px] border-black border-[3px] ">
+//       {/* Left Section */}
+//         <div className="flex-1 p-6 md:p-12 text-white flex flex-col justify-end items-center md:items-start">
+//           <h1 className="text-4xl md:text-6xl font-extrabold text-textPrimary text-center md:text-left">
+//             2 Trillion
+//           </h1>
+//           {/* maybe animate number to look like its counting up, maybe even something with blocks because bitcoin blocks */}
+//           <p className="text-md md:text-lg mt-2 text-center text-textSecondary  md:text-left">
+//             Bitcoin's Market Cap Today
+//           </p>
+//         </div>
+
+//         {/* Right Section with Circles */}
+//         <div className="flex-1 relative grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center lg:block lg:mr-[100px]  ">
+         
+//         <Bubble
+//   title="$100 Billion"
+//   subtitle="Annual movie & entertainment market"
+//   size="w-[120px] sm:w-[160px] lg:w-[225px]"
+//   className="lg:absolute lg:right-[50%] lg:top-[3%]"
+// />
+
+
+
+//            <div className="aspect-square w-[140px] sm:w-[200px] lg:absolute lg:right-[0%] lg:top-[40%] lg:w-[300px] hover:scale-110 transition-transform duration-300">
+//             <div className="flex h-full w-full items-center justify-center rounded-full shadow-xl text-center bg-white/50">
+//               <div>
+//                 <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-textPrimary">$300 Billion</h2>
+//                 <p className="text-textSecondary text-xs sm:text-sm">Annual private credit market</p>
+//               </div>
+//             </div>
+//           </div>
+
+//            <div className="aspect-square w-[140px] sm:w-[140px] lg:absolute lg:bottom-[5%] lg:right-[80%] lg:w-[250px] hover:scale-110 transition-transform duration-300">
+//             <div className="flex h-full w-full items-center justify-center rounded-full shadow-xl text-center bg-white/50">
+//               <div>
+//                 <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-textPrimary">$250 Billion</h2>
+//                 <p className="text-textSecondary text-xs sm:text-sm">Annual data center market</p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Bubbles;
+
+"use client";
 import React from "react";
 
 const Bubbles = () => {
   return (
-    <div className="relative px-5 lg:px-[175px] py-10 bg-black ">
+    <div className="relative px-4 sm:px-10 lg:px-32 pt-10 pb-0 lg:pb-8">
+
       {/* Title */}
-      <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold leading-relaxed lg:leading-[1.5] tracking-wide text-center mb-[50px]">
-        Lever sits at the Intersection of Lending and Tokenization
+      <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight text-textSecondary text-center mb-6">
+        At the Intersection of Bitcoin and Real-World Assets
       </h1>
 
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-4 lg:h-[500px] border-[1px] rounded-[25px]">
+      <div className="w-full flex flex-col lg:flex-row gap-6 lg:gap-4 lg:h-[550px] border-black border-[3px] rounded-[25px] pb-10">
         {/* Left Section */}
         <div className="flex-1 p-6 md:p-12 text-white flex flex-col justify-end items-center md:items-start">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-center md:text-left">
-            $50 million
+          <h1 className="text-2xl sm:text-3xl md:text-6xl font-extrabold text-textPrimary/70 text-center md:text-left">
+            $2 Trillion
           </h1>
-          <p className="text-md md:text-lg mt-2 text-center md:text-left">
-            Real estate deals on Lever
+          <p className="text-sm sm:text-md md:text-lg mt-2 text-center text-textSecondary md:text-left">
+            Bitcoin&apos;s Market Cap Today
           </p>
         </div>
 
         {/* Right Section with Circles */}
-        <div className="flex-1 relative grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center lg:block lg:mr-[100px] mb-5">
-          {/* Bitcoin Loan Market */}
-          <div className="aspect-square w-[120px] sm:w-[160px] lg:absolute lg:right-[50%] lg:top-[6%] lg:w-[240px] hover:scale-110 transition-transform duration-300">
-            <div className="flex h-full w-full items-center justify-center rounded-full shadow-lg text-center bg-white">
-              <div>
-                <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-[#000]">$50 billion</h2>
-                <p className="text-gray-500 text-xs sm:text-sm">Bitcoin Loan Market in 2030</p>
-              </div>
-            </div>
-          </div>
+        <div className="flex-1 relative grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center lg:block lg:mr-[100px]">
+        <div className="aspect-square w-[160px] sm:w-[160px] lg:absolute lg:right-[50%] lg:top-[3%] lg:w-[225px] hover:scale-110 transition-transform duration-300">
+  <div className="flex h-full w-full items-center justify-center rounded-full shadow-xl text-center bg-white/50">
+    <div>
+      <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-textPrimary/70">$100 Billion</h2>
+      <p className="text-textSecondary text-xs sm:text-sm">Annual media market</p>
+    </div>
+  </div>
+</div>
 
-          {/* Tokenized Assets */}
-          <div className="aspect-square w-[140px] sm:w-[200px] lg:absolute lg:right-[5%] lg:top-[35%] lg:w-[300px] hover:scale-110 transition-transform duration-300">
-            <div className="flex h-full w-full items-center justify-center rounded-full shadow-lg text-center bg-white">
-              <div>
-                <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-[#000]">$2 trillion</h2>
-                <p className="text-gray-500 text-xs sm:text-sm">Tokenized Assets by 2030</p>
-              </div>
-            </div>
-          </div>
+<div className="aspect-square w-[180px] sm:w-[200px] lg:absolute lg:right-[0%] lg:top-[40%] lg:w-[300px] hover:scale-110 transition-transform duration-300">
+  <div className="flex h-full w-full items-center justify-center rounded-full shadow-xl text-center bg-white/50">
+    <div>
+      <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-textPrimary/70">$300 Billion</h2>
+      <p className="text-textSecondary text-xs sm:text-sm">Annual private credit market</p>
+    </div>
+  </div>
+</div>
 
-          {/* Annual Revenue Opportunity */}
-          <div className="aspect-square w-[100px] sm:w-[140px] lg:absolute lg:bottom-[5%] lg:right-[75%] lg:w-[180px] hover:scale-110 transition-transform duration-300">
-            <div className="flex h-full w-full items-center justify-center rounded-full shadow-lg text-center bg-white">
-              <div>
-                <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-[#000]">$500 million</h2>
-                <p className="text-gray-500 text-xs sm:text-sm">Annual revenue opportunity</p>
-              </div>
-            </div>
-          </div>
+<div className="aspect-square w-[180px] sm:w-[140px] lg:absolute lg:bottom-[5%] lg:right-[80%] lg:w-[250px] hover:scale-110 transition-transform duration-300">
+  <div className="flex h-full w-full items-center justify-center rounded-full shadow-xl text-center bg-white/50">
+    <div>
+      <h2 className="font-extrabold text-sm sm:text-lg lg:text-xl text-textPrimary/70">$250 Billion</h2>
+      <p className="text-textSecondary text-xs sm:text-sm">Annual data center market</p>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     // Prepare email options
     const mailOptions = {
       from: "emman0621@gmail.com", // Your Gmail address
-      to: "jullian@leverit.io", // The recipient email address
+      to: "emmanuel@leverit.io", // The recipient email address
       subject: "New Waitlist Signup",
       html: `
         <h2>New Waitlist Signup</h2>
