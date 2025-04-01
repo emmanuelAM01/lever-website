@@ -6,22 +6,22 @@ const Cards = () => {
   const cards = [
     {
       title: "Real World Investments",
-      desc: "A click away from real yield like AI GPU cashflow, media IP sales, and private credit",
+      desc: "Lever connects you to tangible yield from AI data centers and private credit funds",
       src: "/images/icons/rwaIcon.svg",
     },
     {
       title: "Predictable Lending",
-      desc: "Collateralized BTC is used to borrow stablecoins at fixed, low rates (unlike most DeFi apps)",
+      desc: "BTC deposits get collateralized to borrow investable stablecoins at fixed, low rates",
       src: "/images/icons/lockIcon.svg",
     },
     {
       title: "Gradual Decentralization",
-      desc: "Starting with bespoke capital raises and lending, evolving into a multi-asset and multi-lender DEX",
+      desc: "Starting with bespoke capital raises and lending, evolving into a decentralized exchange",
       src: "/images/icons/nodeIcon.svg",
     },
     {
       title: "Stablecoin Endgame",
-      desc: "Creating a use case for BTC in the real world, launching LeverUSD to intermediate a new digital economy",
+      desc: "Lever gives BTC a real-world use case, launching LeverUSD to underlie a new digital economy",
       src: "/images/icons/arrowsIcon.svg",
     },
   ];
@@ -31,9 +31,7 @@ const Cards = () => {
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 w-full">
         {/* Left Section */}
         <div className="flex flex-col justify-center py-10">
-          <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-textPrimary/70 mb-4 sm:mb-6">
-            A Simple, Compliant Experience
-          </h1>
+
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight text-textSecondary">
             Bitcoin-Collateralized Investing
           </h2>
@@ -44,7 +42,7 @@ const Cards = () => {
           {cards.map((card, i) => (
             <div
               key={i}
-              className="bg-white/50 shadow-md rounded-none p-6 sm:p-8 flex items-start gap-4 border-[3px] rounded-tl-[0px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[0px] transition-shadow duration-500 hover:shadow-[0_0_8px_#FF6F61]"
+              className="bg-white shadow-sm p-6 sm:p-8 flex items-start gap-4 border border-gray-200 rounded-tl-[0px] rounded-tr-[120px] rounded-bl-[120px] rounded-br-[0px] transition transform duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <div className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] relative flex-shrink-0">
                 <Image

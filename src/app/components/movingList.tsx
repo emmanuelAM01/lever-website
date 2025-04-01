@@ -7,9 +7,12 @@ const SpinningList = () => {
     { name: "Centrifuge", src: "/images/logos/cetnrifuge.svg", url:"https://centrifuge.io/" },
     { name: "Gaib", src: "/images/logos/gaib.png", url:"https://www.gaib.ai/" },
     { name: "Parq", src: "/images/logos/parq.png", url:"https://parqstreet.com/" },
+    { name: "Starkware", src : "/images/logos/starkware.svg", url:"https://starkware.co/" },
+    { name: "Nordark", src: "/images/logos/nordark.svg", url:"https://www.nordark.com/" },
   ];
 
   const settings = {
+    arrows: false, 
     dots: false,
     infinite: true,
     speed: 10000,

@@ -56,44 +56,38 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Whitepaper = "/leverWhitepaper.pdf";
 
-const Header = ({
-  isVisible, // isVisible === true means hero is out of view (state 2)
-  scrollToForm,
-}: {
-  isVisible: boolean;
+interface HeaderProps {
+  isVisible: boolean; // true when hero is out of view
   scrollToForm: () => void;
-}) => {
-  const handleWhitePaper = () => window.open(Whitepaper, "_blank");
+}
 
-  // Ref to measure the width of the logo
+const Header = ({ isVisible, scrollToForm }: HeaderProps) => {
+  const handleWhitePaper = () => window.open(Whitepaper, "_blank");
   const logoRef = useRef<HTMLHeadingElement>(null);
-  // Offset needed to move the centered logo so its left edge aligns with target margin
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     if (logoRef.current && typeof window !== "undefined") {
-      // Tailwind class "right-6" is typically 1.5rem, which is about 24px at a 16px base.
-      const targetMargin = 24; 
+      // "right-6" is roughly 24px margin
+      const targetMargin = 24;
       const logoWidth = logoRef.current.offsetWidth;
-      // When centered, the logo's center is at window.innerWidth / 2.
-      // To have its left edge be at targetMargin, its center should be at targetMargin + (logoWidth / 2).
-      // The required offset is the difference:
-      const computedOffset = window.innerWidth / 2 - (targetMargin + logoWidth / 2);
+      // Centered logo offset calculation: center's x - (target margin + half logo width)
+      const computedOffset =
+        window.innerWidth / 2 - (targetMargin + logoWidth / 2);
       setOffset(computedOffset);
     }
   }, []);
 
   return (
     <motion.header
-      className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-3xl shadow-md"
+      className="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md border-b border-white/20"
       layout
       transition={{ duration: 0.5 }}
     >
-      {/* Flex container ensures vertical centering */}
-      <div className="relative px-6 h-12 md:h-16 flex items-center justify-center">
+      <div className="relative px-6 h-16 flex items-center justify-center">
         <motion.h1
           ref={logoRef}
-          className="text-lg md:text-xl font-bold font-heading text-corralPrimary hover:text-corralPrimary/80"
+          className="text-2xl font-bold uppercase tracking-wider text-corralPrimary hover:text-corralPrimary/80"
           animate={{ x: isVisible ? -offset : 0 }}
           transition={{ duration: 0.7 }}
         >
@@ -103,20 +97,20 @@ const Header = ({
         <AnimatePresence>
           {isVisible && (
             <motion.div
-              className="absolute right-6 flex items-center gap-2"
+              className="absolute right-6 flex items-center gap-4"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.7 }}
             >
               <button
-                className="bg-gray-100 hover:bg-gray-400 text-black hover:text-gray-900 px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm rounded-full font-medium"
+                className="px-4 py-2 border border-corralPrimary text-corralPrimary rounded-full text-sm font-medium hover:bg-corralPrimary/5 transition"
                 onClick={handleWhitePaper}
               >
                 Whitepaper
               </button>
               <button
-                className="bg-corralPrimary hover:bg-corralPrimary/90 text-white px-3 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm rounded-full font-medium"
+                className="px-4 py-2 bg-corralPrimary text-white rounded-full text-sm font-medium hover:bg-corralPrimary/90 transition"
                 onClick={scrollToForm}
               >
                 Join Waitlist
