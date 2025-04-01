@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import MovingList from "./components/movingList";
