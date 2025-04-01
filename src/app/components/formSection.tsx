@@ -91,7 +91,7 @@ const Form = ({ formRef }: { formRef: React.RefObject<HTMLDivElement> }) => {
         ) : (
           <>
             <p className="text-center mb-6 text-textPrimary/70 text-lg sm:text-2xl">
-              Join Lever's waitlist
+              Join Lever&apos;s waitlist
             </p>
 
             <form onSubmit={handleSubmit}>
