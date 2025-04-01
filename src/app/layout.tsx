@@ -15,7 +15,7 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "Lever",
-  description: "Lever",
+  description: "Commonsense Yield on Bitcoin",
 };
 
 export default function RootLayout({
