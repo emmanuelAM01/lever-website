@@ -89,12 +89,12 @@ const Hero = ({ scrollToForm, scrollToCards, heroRef }: HeroProps) => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-2xl mx-auto text-center p-6 space-y-6">
-        <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
+        <h1 className="text-3xl sm:text-5xl font-bold leading-tight font-heading">
           Commonsense Yield on
           <span className="text-red-500"> Bitcoin</span>
         </h1>
-        <p className="text-base sm:text-lg text-gray-700">
-          Deposit BTC. Earn stablecoins. Lever unlocks real-world value.
+        <p className="text-base sm:text-lg text-textSecondary font-heading">
+          Deposit BTC. Earn stablecoins from real-world assets.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
           <button

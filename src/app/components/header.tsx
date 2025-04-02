@@ -55,6 +55,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Whitepaper = "/leverWhitepaper.pdf";
+const Logo = "/images/logos/Lever.svg";
 
 interface HeaderProps {
   isVisible: boolean; // true when hero is out of view
@@ -85,19 +86,24 @@ const Header = ({ isVisible, scrollToForm }: HeaderProps) => {
       transition={{ duration: 0.5 }}
     >
       <div className="relative px-6 h-16 flex items-center justify-center">
-        <motion.h1
-          ref={logoRef}
-          className="text-2xl font-bold uppercase tracking-wider text-corralPrimary hover:text-corralPrimary/80"
-          animate={{ x: isVisible ? -offset : 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          LEVER
-        </motion.h1>
+      <motion.h1
+  ref={logoRef}
+  className="h-[12vh] md:h-[18vh]" // Smaller on mobile, larger on desktop
+  animate={{ x: isVisible ? -offset : 0 }}
+  transition={{ duration: 0.7 }}
+>
+  <picture>
+    <source media="(min-width: 768px)" srcSet={Logo} type="image/svg+xml" />
+    <img src="/images/logos/Lever.png" alt="Lever Logo" className="h-full w-auto" />
+  </picture>
+</motion.h1>
+
+
 
         <AnimatePresence>
           {isVisible && (
             <motion.div
-              className="absolute right-6 flex items-center gap-4"
+              className="absolute right-6 flex items-center gap-1 md:gap-4"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}

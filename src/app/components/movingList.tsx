@@ -3,12 +3,13 @@ import Slider from "react-slick";
 
 const SpinningList = () => {
   const logos = [
-    { name: "Antalpha", src: "/images/logos/antalpha.svg", url:"https://www.antalpha.com/" },
+    // { name: "Antalpha", src: "/images/logos/antalpha.svg", url:"https://www.antalpha.com/" },
     { name: "Centrifuge", src: "/images/logos/cetnrifuge.svg", url:"https://centrifuge.io/" },
     { name: "Gaib", src: "/images/logos/gaib.png", url:"https://www.gaib.ai/" },
     { name: "Parq", src: "/images/logos/parq.png", url:"https://parqstreet.com/" },
     { name: "Starkware", src : "/images/logos/starkware.svg", url:"https://starkware.co/" },
     { name: "Nordark", src: "/images/logos/nordark.svg", url:"https://www.nordark.com/" },
+    { name: "Valuit", src: "/images/logos/valuit.png", url:"https://valuit.com/" },
   ];
 
   const settings = {
