@@ -42,13 +42,13 @@ export async function POST(req: Request) {
 
     // Return success response
     return NextResponse.json(
-      { message: "Form submitted successfully!" },
+      { message: "You are now on Lever's waitlist" },
       { status: 200 }
     );
   } catch (error) {
     console.error("Error submitting form:", error);
     return NextResponse.json(
-      { message: "Internal server error" },
+      { message: "We ran into some trouble processing that form submission." },
       { status: 500 }
     );
   }

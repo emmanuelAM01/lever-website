@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Header from "./components/header";
-import Hero from "./components/hero";
-import MovingList from "./components/movingList";
-import Cards from "./components/cards";
-import Bubbles from "./components/bubbles";
-import Form from "./components/formSection";
-import Footer from "./components/footer";
+import Header from "./components/sections/header";
+import Hero from "./components/sections/hero";
+import MovingList from "./components/sections/movingList";
+import Cards from "./components/sections/cards";
+import Bubbles from "./components/sections/bubbles";
+import Form from "./components/sections/formSection";
+import Footer from "./components/sections/footer";
 
 const Index = () => {
   const [showHeader, setShowHeader] = useState(false);
